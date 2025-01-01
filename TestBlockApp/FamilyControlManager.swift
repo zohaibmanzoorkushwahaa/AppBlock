@@ -1,10 +1,9 @@
 //
-//  ActivityRequestManager.swift
-//  AppBlocker
+//  FamilyControlManager.swift
+//  TestBlockApp
 //
-//  Created by Muhammad Irfan Zafar on 23/08/2024.
+//  Created by Muhammad Irfan Zafar on 26/08/2024.
 //
-
 
 import FamilyControls
 import Combine
@@ -39,7 +38,7 @@ class FamilyControlsManager: ObservableObject {
         }
     }
     
-    // MARK: - ScreenTime AP
+    // MARK: - ScreenTime API
     func requestAuthorizationStatus() -> AuthorizationStatus {
         authorizationCenter.authorizationStatus
     }
@@ -68,7 +67,7 @@ class FamilyControlsManager: ObservableObject {
         case .approved:
             hasScreenTimePermission = true
         @unknown default:
-            fatalError("요청한 권한설정 타입에 대한 처리는 없습니다")
+            fatalError("Fatal Error")
         }
     }
 }

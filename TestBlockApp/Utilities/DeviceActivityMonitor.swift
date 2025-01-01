@@ -1,12 +1,11 @@
 //
-//  DeviceActivityManager.swift
-//  AppBlocker
+//  DeviceActivityMonitor.swift
+//  TestBlockApp
 //
 //  Created by Muhammad Irfan Zafar on 26/08/2024.
 //
 
 import Foundation
-
 import DeviceActivity
 import ManagedSettings
 
@@ -16,7 +15,6 @@ class DeviceActivityManager: ObservableObject {
 
     let deviceActivityCenter = DeviceActivityCenter()
     
-
     /// https://github.com/DeveloperAcademy-POSTECH/MC2-Team18-sunghoyazaza
     func handleStartDeviceActivityMonitoring(
         startTime: DateComponents,
@@ -53,7 +51,7 @@ extension DeviceActivityName {
     static let daily = Self("daily")
 }
 
-// MARK: - MAnagedSettingsStore List
+// MARK: - ManagedSettingsStore List
 extension ManagedSettingsStore.Name {
     static let daily = Self("daily")
 }
